@@ -1,6 +1,5 @@
 package tw.ChallengeEleFlow.services;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,7 @@ public class H2dbService {
 
 	// Populando o servidor de testes
 	public void instantiateH2dbTest() {
-
 		PopulandoPlanetasManual();
-
 	}
 
 	private void PopulandoPlanetasManual() {
@@ -45,7 +42,6 @@ public class H2dbService {
 				"http://swapi.dev/api/films/4/", 
 				"http://swapi.dev/api/films/5/", 
 				"http://swapi.dev/api/films/6/"));
-		
 		
 		iPlanetsRepository.saveAll(Arrays.asList(planets1, planets2, planets3, planets4));
 
