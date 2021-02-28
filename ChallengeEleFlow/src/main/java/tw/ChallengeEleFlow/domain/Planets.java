@@ -1,13 +1,16 @@
 package tw.ChallengeEleFlow.domain;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 @Entity
 public class Planets implements Serializable {
@@ -28,7 +31,9 @@ public class Planets implements Serializable {
 	//private String population;
 	//List<String> residents = new ArrayList<>();
 	
-	//List<String> films = new ArrayList<>();
+	@ElementCollection
+	@CollectionTable(name = "Planets_Filmes")
+	private Set<String> films = new HashSet<>();
 	
 	//private String created;
 	//private String edited;
@@ -167,13 +172,13 @@ public class Planets implements Serializable {
 //		this.residents = residents;
 //	}
 
-//	public List<String> getFilms() {
-//		return films;
-//	}
-//
-//	public void setFilms(List<String> films) {
-//		this.films = films;
-//	}
+	public Set<String> getFilms() {
+		return films;
+	}
+
+	public void setFilms(Set<String> films) {
+		this.films = films;
+	}
 
 //	public String getCreated() {
 //		return created;

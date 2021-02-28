@@ -18,9 +18,7 @@ public class h2dbConfig {
 //instancia o servidor alocado na memoria apenas para fins de testes
 	@Bean
 	public boolean instantiateH2dbTest() throws ParseException {
-		
 		h2dbConfig.instantiateH2dbTest();
-		
 		return true;
 	}
 }
