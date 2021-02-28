@@ -13,7 +13,7 @@ import tw.ChallengeEleFlow.services.PlanetsService;
 public class PlanetsResource {
 	
 	@Autowired
-	private PlanetsService PplanetsService;
+	private PlanetsService planetsService;
 	
 	@RequestMapping(value = "/tw", method = RequestMethod.GET )
 	public String getTw() {
